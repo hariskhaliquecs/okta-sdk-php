@@ -16,7 +16,8 @@ before_script:
   - mkdir -p ~/.okta
 
 script:
-  - vendor/bin/phpunit --verbose --coverage-clover build/logs/clover.xml
+  - if [ -z $TRAVIS_SECURE_ENV_VARS ]; then vendor/bin/phpunit --verbose --coverage-clover build/logs/clover.xml; fi
+  - if [ ! -z $TRAVIS_SECURE_ENV_VARS ]; then vendor/bin/phpunit --verbose --testsuite=Unit --coverage-clover build/logs/clover.xml; fi
 
 after_success:
   - if [[ $COVERAGE = 'true' ]]; then bash <(curl -s https://codecov.io/bash); fi
