@@ -1,4 +1,5 @@
 <?php
+use Okta\ClientBuilder;
 use Okta\Users\User;
 
 /******************************************************************************
@@ -17,33 +18,33 @@ use Okta\Users\User;
  * limitations under the License.                                             *
  ******************************************************************************/
 
-class GetUser extends BaseIntegrationTestCase
+class GetUserTest extends BaseIntegrationTestCase
 {
     /** @var User $localUser */
-    public static $user;
+    public static $user = null;
 
     public static function setUpBeforeClass()
     {
         parent::setUpBeforeClass();
 
-        $user = new User();
-
-        $profile = $user->getProfile();
-        $profile->setFirstName('John');
-        $profile->setLastName('Get-User');
-        $profile->setEmail('john-get-user@example.com');
-        $profile->setLogin('john-get-user@example.com');
-        $user->setProfile($profile);
-
-        $credentials = $user->getCredentials();
-        $password = $credentials->getPassword();
-        $password->setValue('Abcd1234');
-
-        $credentials->setPassword($password);
-
-        static::$user = $user->create();
-
+        $clientBuilder = new ClientBuilder();
+        self::$client = $clientBuilder
+            ->build();
     }
+
+    public function setUp()
+    {
+        if(null === static::$user) {
+            $this->createUser();
+        }
+    }
+
+    /** @test */
+    public function can_create_a_user()
+    {
+        $this->assertInstanceOf(User::class, static::$user);
+    }
+
 
     /** @test */
     public function can_get_user_by_id()
@@ -85,7 +86,7 @@ class GetUser extends BaseIntegrationTestCase
         static::$user->delete();
         try {
             $localUser = (new User)->get(static::$user->getId());
-            dump($localUser);
+            $this->markTestSkipped('Could not verify delete');
         } catch (\Okta\Exceptions\ResourceException $re) {
             $this->assertEquals(404, $re->getHttpStatus());
         }
@@ -96,9 +97,45 @@ class GetUser extends BaseIntegrationTestCase
 
     public static function tearDownAfterClass()
     {
-//        static::$user->delete();
+        if(static::$user instanceof User) {
+
+            try {
+                static::$user->deactivate();
+            } catch (\Okta\Exceptions\ResourceException $re) {
+
+            }
+
+            try {
+                static::$user->delete();
+            } catch (\Okta\Exceptions\ResourceException $re) {
+
+            }
+
+        }
 
         parent::tearDownAfterClass();
+    }
+
+    private function createUser()
+    {
+        $user = new User();
+
+        $profile = $user->getProfile();
+        $profile->setFirstName('John');
+        $profile->setLastName('Get-User');
+        $profile->setEmail('john-get-user@example.com');
+        $profile->setLogin('john-get-user@example.com');
+        $user->setProfile($profile);
+
+        $credentials = $user->getCredentials();
+        $password = $credentials->getPassword();
+        $password->setValue('Abcd1234');
+
+        $credentials->setPassword($password);
+
+        $user->setCredentials($credentials);
+
+        static::$user = $user->create();
     }
 
 }

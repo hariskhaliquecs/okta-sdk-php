@@ -26,8 +26,6 @@ class BaseIntegrationTestCase extends TestCase
     {
         parent::setUpBeforeClass();
 
-        $clientBuilder = new ClientBuilder();
-        self::$client = $clientBuilder
-            ->build();
+
     }
 }
