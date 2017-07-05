@@ -687,6 +687,37 @@ class UserTest extends TestCase
     }
 
     /** @test */
+    public function can_create_a_user_that_is_not_activated()
+    {
+        $httpClient = $this->createNewHttpClient();
+
+        $user = new User();
+        $profile = $user->getProfile();
+        $profile->firstName = 'Okta';
+        $user->setProfile($profile);
+        $user->create(['query'=>['activate'=>false]]);
+
+        $request = $httpClient->getRequests();
+
+        $this->assertEquals('POST', $request[0]->getMethod());
+        $this->assertEquals(
+            "/api/v1/users",
+            $request[0]->getUri()->getPath()
+        );
+
+        $this->assertEquals(
+            'activate=false',
+            $request[0]->getUri()->getQuery()
+        );
+
+        $this->assertContains('application/json', $request[0]->getHeader('accept'));
+        $this->assertEquals(
+            '{"profile":{"firstName":"Okta"}}',
+            $request[0]->getBody()->getContents()
+        );
+    }
+
+    /** @test */
     public function a_user_can_be_added_to_a_group()
     {
         $httpClient = $this->createNewHttpClient();

@@ -193,17 +193,18 @@ class DefaultDataStore
     /**
      * Issues a save request to the API.
      *
-     * @param string $href The path to the resource
+     * @param string           $href The path to the resource
      * @param AbstractResource $resource The resource to save.
-     * @param string $returnType The Resource class you want to return.
+     * @param string           $returnType The Resource class you want to return.
+     * @param array            $options Options array.
      *
      * @return mixed
      */
-    public function createResource($href, $resource, $returnType)
+    public function createResource($href, $resource, $returnType, array $options = [])
     {
         $uri = $this->uriFactory->createUri($this->organizationUrl . '/api/v1' . $href);
 
-        $result = $this->executeRequest('POST', $uri, json_encode($this->toStdClass($resource)));
+        $result = $this->executeRequest('POST', $uri, json_encode($this->toStdClass($resource)), $options);
 
         return new $returnType(null, $result);
     }

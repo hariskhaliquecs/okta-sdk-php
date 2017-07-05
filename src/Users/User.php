@@ -36,14 +36,15 @@ class User extends AbstractResource
     const PASSWORD_CHANGED = 'passwordChanged';
     const TRANSITIONING_TO_STATUS = 'transitioningToStatus';
 
-    public function create()
+    public function create(array $options = [])
     {
         return \Okta\Client::getInstance()
                 ->getDataStore()
                 ->createResource(
                     '/users',
                     $this,
-                    self::class
+                    self::class,
+                    $options
                 );
     }
 

@@ -40,7 +40,7 @@
         "rebuild-resources": [
             "@delete-resources",
             "@generate-resources",
-            "@test",
+            "@test:unit",
             "@fix-code"
         ],
         "delete-resources": [

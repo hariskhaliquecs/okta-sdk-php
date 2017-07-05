@@ -43,14 +43,15 @@ class {{modelName}} extends AbstractResource
 
     {{/if}}
     {{#if (eq alias "create")}}
-    public function create()
+    public function create(array $options = [])
     {
         return \Okta\Client::getInstance()
                 ->getDataStore()
                 ->createResource(
                     '{{getCrudOperationPath this}}',
                     $this,
-                    self::class
+                    self::class,
+                    $options
                 );
     }
 
