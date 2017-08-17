@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Okta\DataStore\DefaultDataStore | Okta PHP SDK</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Okta_DataStore_DefaultDataStore" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../0.1.0/index.html" data-version="0.1.0">0.1.0</option>
+                                            <option value="../../../develop/index.html" data-version="develop">Develop</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Okta PHP SDK</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Okta.html">Okta</a></li><li class="backslash">\</li><li><a href="../../Okta/DataStore.html">DataStore</a></li><li class="backslash">\</li><li>DefaultDataStore</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            DefaultDataStore
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>DefaultDataStore</strong>        (<a href="https://github.com/okta/okta-sdk-php/blob/0.1.0/src/DataStore/DefaultDataStore.php">View source</a>)
+</p>
+
+        
+    
+
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_uriFactory">
+                                        protected                                        <abbr title="Http\Message\UriFactory">UriFactory</abbr>
+                </td>
+                <td>$uriFactory</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_messageFactory">
+                                        protected                                        <abbr title="Http\Message\MessageFactory">MessageFactory</abbr>
+                </td>
+                <td>$messageFactory</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $token, string $organizationUrl, <abbr title="Http\Client\HttpClient">HttpClient</abbr> $httpClient = null)
+        
+                                            <p>DefaultDataStore constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_instantiate">instantiate</a>(string $class, <a target="_blank" href="http://php.net/stdClass">stdClass</a> $properties = null, array $options = [])
+        
+                                            <p>Create a new instance of a class with the provided properties.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Okta/Resource/AbstractResource.html"><abbr title="Okta\Resource\AbstractResource">AbstractResource</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getResource">getResource</a>(string $href, string $className, string $path, array $options = [])
+        
+                                            <p>Get a resource from the API.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Okta/Resource/AbstractCollection.html"><abbr title="Okta\Resource\AbstractCollection">AbstractCollection</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCollection">getCollection</a>(string $href, string $className, string $collection, array $options = [])
+        
+                                            <p>Get a collection of items.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_saveResource">saveResource</a>(string $href, <a href="../../Okta/Resource/AbstractResource.html"><abbr title="Okta\Resource\AbstractResource">AbstractResource</abbr></a> $resource, string $returnType)
+        
+                                            <p>Issues a save request to the API.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createResource">createResource</a>(string $href, <a href="../../Okta/Resource/AbstractResource.html"><abbr title="Okta\Resource\AbstractResource">AbstractResource</abbr></a> $resource, string $returnType)
+        
+                                            <p>Issues a save request to the API.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteResource">deleteResource</a>(string $href, <a href="../../Okta/Resource/AbstractResource.html"><abbr title="Okta\Resource\AbstractResource">AbstractResource</abbr></a> $resource)
+        
+                                            <p>Issues a delete request to the API.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_executeRequest">executeRequest</a>(string $method, <abbr title="Psr\Http\Message\UriInterface">UriInterface</abbr> $uri, string $body = &#039;&#039;, array $options = [])
+        
+                                            <p>Make the request.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Http\Client\Common\PluginClient">PluginClient</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHttpClient">getHttpClient</a>()
+        
+                                            <p>Get the current PluginClient instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Http\Message\MessageFactory">MessageFactory</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMessageFactory">getMessageFactory</a>()
+        
+                                            <p>Get the current MessageFactory instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Http\Message\UriFactory">UriFactory</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUriFactory">getUriFactory</a>()
+        
+                                            <p>Get the current UriFactory instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOrganizationUrl">getOrganizationUrl</a>()
+        
+                                            <p>Get the organization url.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Psr\Http\Message\UriInterface">UriInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_buildUri">buildUri</a>(string $uri)
+        
+                                            <p>Create an instance of Uri that can be used in the request.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/okta/okta-sdk-php/blob/0.1.0/src/DataStore/DefaultDataStore.php#L79">line 79</a></div>
+        <code>                    
+    <strong>__construct</strong>(string $token, string $organizationUrl, <abbr title="Http\Client\HttpClient">HttpClient</abbr> $httpClient = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>DefaultDataStore constructor.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$organizationUrl</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Http\Client\HttpClient">HttpClient</abbr></td>
+                <td>$httpClient</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_instantiate">
+        <div class="location">at         <a href="https://github.com/okta/okta-sdk-php/blob/0.1.0/src/DataStore/DefaultDataStore.php#L107">line 107</a></div>
+        <code>                    object
+    <strong>instantiate</strong>(string $class, <a target="_blank" href="http://php.net/stdClass">stdClass</a> $properties = null, array $options = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a new instance of a class with the provided properties.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td>Class to instantiate.</td>
+            </tr>
+                    <tr>
+                <td><a target="_blank" href="http://php.net/stdClass">stdClass</a></td>
+                <td>$properties</td>
+                <td>The properties you want to use to instantiate.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Any options you want to set.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getResource">
+        <div class="location">at         <a href="https://github.com/okta/okta-sdk-php/blob/0.1.0/src/DataStore/DefaultDataStore.php#L129">line 129</a></div>
+        <code>                    <a href="../../Okta/Resource/AbstractResource.html"><abbr title="Okta\Resource\AbstractResource">AbstractResource</abbr></a>
+    <strong>getResource</strong>(string $href, string $className, string $path, array $options = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a resource from the API.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$href</td>
+                <td>The unique identifier for the href.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td>The class name to return as.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>The path to the resource.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>The options to use when making the request.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Okta/Resource/AbstractResource.html"><abbr title="Okta\Resource\AbstractResource">AbstractResource</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCollection">
+        <div class="location">at         <a href="https://github.com/okta/okta-sdk-php/blob/0.1.0/src/DataStore/DefaultDataStore.php#L152">line 152</a></div>
+        <code>                    <a href="../../Okta/Resource/AbstractCollection.html"><abbr title="Okta\Resource\AbstractCollection">AbstractCollection</abbr></a>
+    <strong>getCollection</strong>(string $href, string $className, string $collection, array $options = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a collection of items.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$href</td>
+                <td>The unique identifier for the href.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$className</td>
+                <td>The class name for each item in the collection.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$collection</td>
+                <td>the collection type to return as.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Options to add to the request.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Okta/Resource/AbstractCollection.html"><abbr title="Okta\Resource\AbstractCollection">AbstractCollection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveResource">
+        <div class="location">at         <a href="https://github.com/okta/okta-sdk-php/blob/0.1.0/src/DataStore/DefaultDataStore.php#L184">line 184</a></div>
+        <code>                    mixed
+    <strong>saveResource</strong>(string $href, <a href="../../Okta/Resource/AbstractResource.html"><abbr title="Okta\Resource\AbstractResource">AbstractResource</abbr></a> $resource, string $returnType)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Issues a save request to the API.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$href</td>
+                <td>The path to the resource</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Okta/Resource/AbstractResource.html"><abbr title="Okta\Resource\AbstractResource">AbstractResource</abbr></a></td>
+                <td>$resource</td>
+                <td>The resource to save.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$returnType</td>
+                <td>The Resource class you want to return.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createResource">
+        <div class="location">at         <a href="https://github.com/okta/okta-sdk-php/blob/0.1.0/src/DataStore/DefaultDataStore.php#L202">line 202</a></div>
+        <code>                    mixed
+    <strong>createResource</strong>(string $href, <a href="../../Okta/Resource/AbstractResource.html"><abbr title="Okta\Resource\AbstractResource">AbstractResource</abbr></a> $resource, string $returnType)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Issues a save request to the API.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$href</td>
+                <td>The path to the resource</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Okta/Resource/AbstractResource.html"><abbr title="Okta\Resource\AbstractResource">AbstractResource</abbr></a></td>
+                <td>$resource</td>
+                <td>The resource to save.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$returnType</td>
+                <td>The Resource class you want to return.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteResource">
+        <div class="location">at         <a href="https://github.com/okta/okta-sdk-php/blob/0.1.0/src/DataStore/DefaultDataStore.php#L219">line 219</a></div>
+        <code>                    mixed
+    <strong>deleteResource</strong>(string $href, <a href="../../Okta/Resource/AbstractResource.html"><abbr title="Okta\Resource\AbstractResource">AbstractResource</abbr></a> $resource)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Issues a delete request to the API.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$href</td>
+                <td>The path to the resource</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Okta/Resource/AbstractResource.html"><abbr title="Okta\Resource\AbstractResource">AbstractResource</abbr></a></td>
+                <td>$resource</td>
+                <td>The resource to save.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_executeRequest">
+        <div class="location">at         <a href="https://github.com/okta/okta-sdk-php/blob/0.1.0/src/DataStore/DefaultDataStore.php#L240">line 240</a></div>
+        <code>                    mixed|null
+    <strong>executeRequest</strong>(string $method, <abbr title="Psr\Http\Message\UriInterface">UriInterface</abbr> $uri, string $body = &#039;&#039;, array $options = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Make the request.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>The type of request.</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Http\Message\UriInterface">UriInterface</abbr></td>
+                <td>$uri</td>
+                <td>The URI object of the request.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$body</td>
+                <td>The body of the request.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>The options for the request.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Okta/Exceptions/ResourceException.html"><abbr title="Okta\Exceptions\ResourceException">ResourceException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHttpClient">
+        <div class="location">at         <a href="https://github.com/okta/okta-sdk-php/blob/0.1.0/src/DataStore/DefaultDataStore.php#L358">line 358</a></div>
+        <code>                    <abbr title="Http\Client\Common\PluginClient">PluginClient</abbr>
+    <strong>getHttpClient</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the current PluginClient instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Http\Client\Common\PluginClient">PluginClient</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMessageFactory">
+        <div class="location">at         <a href="https://github.com/okta/okta-sdk-php/blob/0.1.0/src/DataStore/DefaultDataStore.php#L368">line 368</a></div>
+        <code>                    <abbr title="Http\Message\MessageFactory">MessageFactory</abbr>
+    <strong>getMessageFactory</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the current MessageFactory instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Http\Message\MessageFactory">MessageFactory</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUriFactory">
+        <div class="location">at         <a href="https://github.com/okta/okta-sdk-php/blob/0.1.0/src/DataStore/DefaultDataStore.php#L378">line 378</a></div>
+        <code>                    <abbr title="Http\Message\UriFactory">UriFactory</abbr>
+    <strong>getUriFactory</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the current UriFactory instance.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Http\Message\UriFactory">UriFactory</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOrganizationUrl">
+        <div class="location">at         <a href="https://github.com/okta/okta-sdk-php/blob/0.1.0/src/DataStore/DefaultDataStore.php#L388">line 388</a></div>
+        <code>                    string
+    <strong>getOrganizationUrl</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the organization url.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_buildUri">
+        <div class="location">at         <a href="https://github.com/okta/okta-sdk-php/blob/0.1.0/src/DataStore/DefaultDataStore.php#L399">line 399</a></div>
+        <code>                    <abbr title="Psr\Http\Message\UriInterface">UriInterface</abbr>
+    <strong>buildUri</strong>(string $uri)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create an instance of Uri that can be used in the request.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$uri</td>
+                <td>The URI to convert into a usable uri object.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Psr\Http\Message\UriInterface">UriInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
